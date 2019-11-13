@@ -8,7 +8,7 @@ require 'directors_database'
 def directors_totals(nds)
   result = {}
   out_i = 0
-  #loop that uses name of director as key and result of gross_for_director as element (total gross of movies)
+  #loop that uses name of director as key and result of Method gross_for_director as element (total gross of movies)
   while out_i < nds.count do
     result[nds[out_i][:name]] = gross_for_director(nds[out_i])
     out_i += 1
