@@ -15,7 +15,11 @@ end
 # using director_data as input
 def gross_for_director(director_data)
   out_i - 0
-  while out_i < director_data
-
+  dir = director_data[:movies]
+  total_gross = 0
+  while out_i < dir.count do
+    total_gross += dir[out_i][:worldwide_gross]
+    out_i += 1
   end
+  total_gross
 end
